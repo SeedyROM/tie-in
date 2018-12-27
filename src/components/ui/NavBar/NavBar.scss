@@ -18,34 +18,40 @@
   }
 
   &__logo {
-    font-weight: bold;
-    font-size: 2rem;
-    font-style: italic;
+    a {
+      font-weight: bold;
+      font-size: 2rem;
+      font-style: italic;
+      text-decoration: none;
+
+      &:active,
+      &:visited,
+      &:link {
+        color: var(--color-white);
+      }
+    }
   }
 
   &__links {
     display: flex;
 
-    >a {
+    a {
       margin-left: 1.5rem;
-    }
-  }
+      text-decoration: none;
+      transition: all 0.5s ease-in-out;
+      border-color: transparent;
 
-  a {
-    text-decoration: none;
-    transition: all 0.5s ease-in-out;
-    border-color: transparent;
+      &.active,
+      &:hover {
+        border-bottom: 1px solid var(--color-white);
+        margin-bottom: -1px;
+      }
 
-    &.active,
-    &:hover {
-      border-bottom: 1px solid var(--color-white);
-      margin-bottom: -1px;
-    }
-
-    &:active,
-    &:visited,
-    &:link {
-      color: var(--color-white);
+      &:active,
+      &:visited,
+      &:link {
+        color: var(--color-white);
+      }
     }
   }
 }
