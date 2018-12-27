@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <div className="App--container">
+          <div className="App__container">
             <NavBar />
             <Routes />
           </div>

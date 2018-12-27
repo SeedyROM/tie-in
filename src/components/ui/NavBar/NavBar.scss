@@ -1,3 +1,43 @@
+@import '../../../styles/site.scss';
+
 .NavBar {
   padding: 1rem 1rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+
+  &--text-shadow {
+    text-shadow: 1px 1px 0px rgba(0, 30, 0, 0.4);
+  }
+
+  &__container {
+    @extend .--content;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-weight: bold;
+    font-size: 2rem;
+    font-style: italic;
+  }
+
+  &__links {
+    display: flex;
+
+    >a {
+      margin-left: 1.5rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:active,
+    &:visited,
+    &:link {
+      color: var(--color-white);
+    }
+  }
 }

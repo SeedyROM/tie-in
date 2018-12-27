@@ -19,3 +19,8 @@ h4,
 h5 {
   font-family: 'IBM Plex Sans', sans-serif;
 }
+
+.--content {
+  max-width: var(--screen-desktop);
+  margin: 0 auto;
+}
