@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Map } from "react-deco";
-import logo from "../../assets/logo.svg";
 
+import logo from "../../assets/logo.svg";
 import "./App.scss";
+
+import NavBar from "./ui/NavBar";
 
 interface IData {
   name: string;
@@ -23,6 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App--container">
+          <NavBar />
           <h1>My World!</h1>
           <Map
             target={fakeData}
