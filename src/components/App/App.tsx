@@ -10,11 +10,11 @@ interface IData {
 }
 
 const fakeData = [
-  {name: "bob",  age: 15},
-  {name: "bowb", age: 95},
-  {name: "botb", age: 25},
-  {name: "boab", age: 155},
-  {name: "bxob", age: 165},
+  { name: "bob", age: 15 },
+  { name: "bowb", age: 95 },
+  { name: "botb", age: 25 },
+  { name: "boab", age: 155 },
+  { name: "bxob", age: 165 },
 ];
 
 class App extends Component {
@@ -22,10 +22,17 @@ class App extends Component {
     let i = 0;
     return (
       <div className="App">
-        <h1>My World!</h1>
-        <Map target={fakeData} with={(data: IData) => (
-          <div key={i++}>{data.name} {data.age}</div>
-        )}/>
+        <div className="App--container">
+          <h1>My World!</h1>
+          <Map
+            target={fakeData}
+            with={(data: IData) => (
+              <div key={i++}>
+                {data.name} {data.age}
+              </div>
+            )}
+          />
+        </div>
       </div>
     );
   }

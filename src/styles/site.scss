@@ -4,13 +4,18 @@
 @import './globals';
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Roboto', 'Avenir', Helvetica, sans-serif;
+html,
+body {
+  font-family: 'Roboto', 'Avenir', Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'IBM Plex Sans', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'IBM Plex Sans', sans-serif;
 }

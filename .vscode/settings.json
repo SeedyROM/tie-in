@@ -1,6 +1,9 @@
 {
-    "tslint.alwaysShowStatus": true,
-    "tslint.autoFixOnSave": true,
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true
+  "tslint.alwaysShowStatus": true,
+  "tslint.autoFixOnSave": true,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true
 }
