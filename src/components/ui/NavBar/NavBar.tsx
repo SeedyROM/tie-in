@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import "./NavBar.scss";
 
@@ -8,10 +8,14 @@ export default class NavBar extends Component {
     return (
       <div className="NavBar">
         <div className="NavBar__container NavBar--text-shadow">
-          <div className="NavBar__logo">Tie-In</div>
+          <div className="NavBar__logo">
+            Tie<span>&#8208;</span>In
+          </div>
           <div className="NavBar__links">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <NavLink exact={true} to="/">
+              Home
+            </NavLink>
+            <NavLink to="/about">About</NavLink>
           </div>
         </div>
       </div>
