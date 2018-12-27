@@ -1,42 +1,23 @@
 import React, { Component } from "react";
-import { Map } from "react-deco";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 import "./App.scss";
 
+import Routes from "../routes";
 import NavBar from "./ui/NavBar";
-
-interface IData {
-  name: string;
-  age: number;
-}
-
-const fakeData = [
-  { name: "bob", age: 15 },
-  { name: "bowb", age: 95 },
-  { name: "botb", age: 25 },
-  { name: "boab", age: 155 },
-  { name: "bxob", age: 165 },
-];
 
 class App extends Component {
   public render() {
-    let i = 0;
     return (
-      <div className="App">
-        <div className="App--container">
-          <NavBar />
-          <h1>My World!</h1>
-          <Map
-            target={fakeData}
-            with={(data: IData) => (
-              <div key={i++}>
-                {data.name} {data.age}
-              </div>
-            )}
-          />
+      <Router>
+        <div className="App">
+          <div className="App--container">
+            <NavBar />
+            <Routes />
+          </div>
         </div>
-      </div>
+      </Router>
     );
   }
 }
