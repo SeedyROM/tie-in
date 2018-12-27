@@ -1,0 +1,6 @@
+{
+    "tslint.alwaysShowStatus": true,
+    "tslint.autoFixOnSave": true,
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true
+}
