@@ -1,10 +1,21 @@
-:root {
-  --screen-desktop-lg: 1300px;
-  --screen-desktop: 1024px;
-  --screen-tablet: 768px;
-  --screen-mobile: 425px;
-  --screen-mobile-sm: 320px;
+@import './helpers/variables';
 
-  --color-blue: #300CE8;
-  --color-white: #F3F3F3;
-}
+$screen: (
+  desktop-lg: 1300px,
+  desktop: 1024px,
+  tablet: 768px,
+  mobile: 425px,
+  mobile-sm: 320px,
+);
+
+$color: (
+  blue: #300CE8,
+  white: #F3F3F3,
+);
+
+$globals: (
+  screen: $screen,
+  color: $color,
+);
+
+@include build-globals($globals);

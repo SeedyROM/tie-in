@@ -1,0 +1,29 @@
+@function is-map($value) {
+  @return type-of($value) == 'map';
+}
+
+@mixin _build-globals($map, $prefix: '') {
+  @each $key,
+  $value in $map {
+
+    @if is-map($value) {
+      @if $prefix == '' {
+        @include _build-globals($value, $key);
+      } @else {
+        @include _build-globals($value, $prefix+'--'+$key);
+      }
+    } @else {
+      @if $prefix == '' {
+        --#{$key}: #{$value};
+      } @else {
+        --#{$prefix}-#{$key}: #{$value};
+      }
+    }
+  }
+}
+
+@mixin build-globals($map) {
+  :root {
+    @include _build-globals($map);
+  }
+}

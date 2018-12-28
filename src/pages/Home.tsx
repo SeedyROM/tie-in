@@ -3,7 +3,7 @@ import { Map } from "react-deco";
 import styled from "styled-components";
 
 const Container = styled.div`
-  background: blue;
+  background: tomato;
   width: 100%;
   height: 100vh;
 `;
