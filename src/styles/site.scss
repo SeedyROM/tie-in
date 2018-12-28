@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,700,700i|Roboto');
 
 @import './globals';
+@import './helpers/typography';
 
 * {
   box-sizing: border-box;
@@ -10,6 +11,7 @@
 html,
 body {
   font-family: 'Roboto', 'Avenir', Helvetica, sans-serif;
+  @include fluid-type(10px, 15px);
 }
 
 h1,

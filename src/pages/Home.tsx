@@ -1,5 +1,12 @@
 import React, { Component } from "react";
 import { Map } from "react-deco";
+import styled from "styled-components";
+
+const Container = styled.div`
+  background: blue;
+  width: 100%;
+  height: 100vh;
+`;
 
 interface IData {
   name: string;
@@ -18,14 +25,16 @@ export default class Home extends Component {
   public render() {
     let i = 0;
     return (
-      <Map
-        target={fakeData}
-        with={(data: IData) => (
-          <div key={i++}>
-            {data.name} {data.age}
-          </div>
-        )}
-      />
+      <Container>
+        <Map
+          target={fakeData}
+          with={(data: IData) => (
+            <div key={i++}>
+              {data.name} {data.age}
+            </div>
+          )}
+        />
+      </Container>
     );
   }
 }
