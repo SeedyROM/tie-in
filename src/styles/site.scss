@@ -1,8 +1,11 @@
 @import '~normalize.css';
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,700,700i|Roboto');
 
-@import './globals';
+@import './helpers/globals';
 @import './helpers/typography';
+
+@import './theme';
+@include build-globals($theme);
 
 * {
   box-sizing: border-box;
@@ -12,6 +15,8 @@ html,
 body {
   font-family: 'Roboto', 'Avenir', Helvetica, sans-serif;
   @include fluid-type(12px, 15px);
+
+  min-width: var(--screen-mobile-sm);
 }
 
 h1,

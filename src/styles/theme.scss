@@ -1,5 +1,3 @@
-@import './helpers/variables';
-
 $screen: (
   desktop-lg: 1300px,
   desktop: 1024px,
@@ -13,9 +11,7 @@ $color: (
   white: #F3F3F3,
 );
 
-$globals: (
+$theme: (
   screen: $screen,
   color: $color,
 );
-
-@include build-globals($globals);
