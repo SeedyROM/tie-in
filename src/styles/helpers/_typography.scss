@@ -1,8 +1,13 @@
+@import '../globals';
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
 
-@mixin fluid-type($min-font-size, $max-font-size, $min-vw: 425px, $max-vw: 1024px) {
+$fluid-type-min: map-get($screen, mobile);
+$fluid-type-max: map-get($screen, desktop);
+
+@mixin fluid-type($min-font-size, $max-font-size, $min-vw: $fluid-type-min, $max-vw: $fluid-type-max) {
   $u1: unit($min-vw);
   $u2: unit($max-vw);
   $u3: unit($min-font-size);
