@@ -1,25 +1,25 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
 
 import "./NavBar.scss";
+import { Container, Logo, NavLink, NavLinks } from "./NavBar.style";
 
 export default class NavBar extends Component {
   public render() {
     return (
       <div className="NavBar">
-        <div className="NavBar__container NavBar--text-shadow">
-          <div className="NavBar__logo">
-            <Link to="/">
-              Tie<span>&#8208;</span>In
-            </Link>
-          </div>
-          <div className="NavBar__links">
+        <Container className="NavBar--text-shadow">
+          <Logo to="/">
+            Tie<span>&#8208;</span>In
+          </Logo>
+          <NavLinks>
             <NavLink exact={true} to="/">
               Home
             </NavLink>
-            <NavLink to="/about">About</NavLink>
-          </div>
-        </div>
+            <NavLink to="/about">
+              About
+            </NavLink>
+          </NavLinks>
+        </Container>
       </div>
     );
   }

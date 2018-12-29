@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { Map } from "react-deco";
 import styled from "styled-components";
 
-const Container = styled.div`
-  background: tomato;
-  width: 100%;
-  height: 100vh;
-`;
+import { Container, Header, Wrapper } from "../styles/components";
 
 interface IData {
   name: string;
@@ -25,16 +21,19 @@ export default class Home extends Component {
   public render() {
     let i = 0;
     return (
-      <Container>
-        <Map
-          target={fakeData}
-          with={(data: IData) => (
-            <div key={i++}>
-              {data.name} {data.age}
-            </div>
-          )}
-        />
-      </Container>
+      <Wrapper>
+        <Container>
+          <Header>Home</Header>
+          <Map
+            target={fakeData}
+            with={(data: IData) => (
+              <div key={i++}>
+                {data.name} {data.age}
+              </div>
+            )}
+          />
+        </Container>
+      </Wrapper>
     );
   }
 }

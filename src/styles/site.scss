@@ -1,5 +1,5 @@
 @import '~normalize.css';
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,700,700i|Roboto');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,700,700i|Roboto|Libre+Barcode+39+Text');
 
 @import './helpers/globals';
 @import './helpers/typography';
@@ -27,7 +27,3 @@ h5 {
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.--content {
-  max-width: var(--screen-desktop);
-  margin: 0 auto;
-}
